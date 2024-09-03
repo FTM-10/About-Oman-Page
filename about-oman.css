@@ -1,0 +1,82 @@
+/* Reset default browser styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the page */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Center boxes horizontally */
+}
+
+.box {
+    border: 2px solid #007BFF; /* Blue border, adjust color as needed */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the box */
+    flex: 1 1 100%; /* Full width for each box (change to fit the container width) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    display: flex; /* Flex container to align text and image */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between text and image */
+    margin-bottom: 20px; /* Space below each box */
+    max-width: 100%; /* Ensure the box does not exceed container width */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transition for transform and box-shadow */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Slightly increase the size of the box on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.box .text-content {
+    flex: 1; /* Allow text content to grow */
+}
+
+.box .text-content h2 {
+    display: flex; /* Flex container for heading and logo */
+    align-items: center; /* Vertically center the items */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333; /* Darker text color for the heading */
+}
+
+.box .text-content h2 .logo {
+    width: 30px; /* Smaller logo size */
+    height: 30px;
+    margin-left: 10px; /* Space between logo and heading */
+}
+
+.box .text-content p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #666; /* Slightly lighter text color for paragraphs */
+}
+
+/* General image styles */
+.box img {
+    max-width: 50%; /* Adjust width to fit the layout */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd; /* Optional border for images */
+    border-radius: 8px; /* Optional rounded corners for images */
+    margin-top: 10px; /* Space above the image */
+    object-fit: contain; /* Ensure image fits within the box without distortion */
+    max-height: 300px; /* Maximum height for the image to maintain proportion */
+}
+
+/* Specific styles for images on the right side */
+.box img.right-side-image {
+    width: 50px; /* Fixed width for images on the right side */
+    height: 50px; /* Fixed height for images on the right side */
+    object-fit: cover; /* Ensure image covers the fixed size while preserving aspect ratio */
+}
